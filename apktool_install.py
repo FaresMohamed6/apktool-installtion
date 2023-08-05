@@ -64,6 +64,7 @@ while True:
         os.system('pkg update && pkg upgrade -y')
         os.system('pkg install -y wget')
         os.system('wget https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar -O $PREFIX/bin/apktool.jar')
+        os.system('pkg install openjdk-17')
         os.system('wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O $PREFIX/bin/apktool')
         os.system('chmod +x $PREFIX/bin/apktool')
         print(Fore.GREEN + "APKTool has been installed successfully in Termux!")
