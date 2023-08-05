@@ -57,7 +57,21 @@ print(Fore.GREEN + "This tool was created by: FARES MOHAMED")
 print(Fore.YELLOW + '-' * 40)
 
 print(f"{Fore.GREEN}Welcome to the APKTool installation script!")
-
+while True:
+    usr_ter = input("Are you using Termux? (y/n): ")
+    if usr_ter.lower() == 'y':
+        print(Fore.BLUE + "Installing APKTool in Termux...")
+        os.system('pkg update && pkg upgrade -y')
+        os.system('pkg install -y wget')
+        os.system('wget https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar -O $PREFIX/bin/apktool.jar')
+        os.system('wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O $PREFIX/bin/apktool')
+        os.system('chmod +x $PREFIX/bin/apktool')
+        print(Fore.GREEN + "APKTool has been installed successfully in Termux!")
+        break
+    elif usr_ter.lower() == 'n':
+        break
+    else:
+        print(Fore.RED + "Invalid input! Please enter 'y' or 'n'.")
 print(Fore.YELLOW + '-' * 40)
 #########################################################################
 if platform.system() == "Windows":
@@ -88,8 +102,6 @@ print(Fore.CYAN + "1. Install APKTool in Linux")
 print(Fore.CYAN + "2. Install APKTool in Windows")
 
 print(Fore.CYAN + "3. Install APKTool in Mac")
-
-print(Fore.CYAN + "4. install apktool in Termux")
 
 print(Fore.LIGHTBLACK_EX + "0. Exit")
 
@@ -152,19 +164,7 @@ while True:
         print(Fore.GREEN + "APKTool has been successfully installed on Mac!")
 
         break
-    elif inputs == "4":
-        print(Fore.BLUE + "Installing APKTool in Termux, please wait.....")
-        os.system('pkg update && pkg upgrade -y')
-        os.system('pkg install -y wget')
-        os.system('pkg install openjdk-17')
-        try:
-            subprocess.check_output(['wget', 'https://github.com/iBotPeaches/Apktool/releases/download/v2.8.1/apktool_2.8.1.jar', '-O', '$PREFIX/bin/apktool.jar'])
-            subprocess.check_output(['wget', 'https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool', '-O', '$PREFIX/bin/apktool'])
-            subprocess.check_output(['chmod', '+x', '$PREFIX/bin/apktool'])
-            print(Fore.GREEN + "APKTool has been installed successfully in Termux!")
-        except subprocess.CalledProcessError:
-            print(Fore.RED + "Failed to install APKTool in Termux!")
-            break
+
     elif inputs == "0":
         print(Fore.YELLOW + "Exiting...")
         time.sleep(2)
