@@ -52,7 +52,7 @@ v7x ='''
 Write.Print(v7x,Colors.red,interval=0.01)
 
 
-print(Fore.GREEN + "This tool was created by FARES MOHAMED")
+print(Fore.GREEN + "This tool was created by: FARES MOHAMED")
 
 print(Fore.YELLOW + '-' * 40)
 
