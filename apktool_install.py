@@ -58,14 +58,15 @@ print(Fore.YELLOW + '-' * 40)
 
 print(f"{Fore.GREEN}Welcome to the APKTool installation script!")
 while True:
-    usr_ter = input("Are you using Termux? (y/n): ")
-    if usr_ter.lower() == 'y':
-        print(Fore.BLUE + "Installing APKTool in Termux...")
+    use_ter = input("Are you using Termux? (y/n): ")
+    if use_ter.lower() == 'y':
+        print(Fore.BLUE + "Installing APKTool in Termux, please wait.....")
         os.system('pkg update && pkg upgrade -y')
         os.system('pkg install -y wget')
-        os.system('wget https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar -O $PREFIX/bin/apktool.jar')
-        os.system('pkg install openjdk-17')
-        os.system('wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O $PREFIX/bin/apktool')
+        os.system(
+            'wget https://github.com/iBotPeaches/Apktool/releases/download/v2.8.1/apktool_2.8.1.jar -O $PREFIX/bin/apktool.jar')
+        os.system(
+            'wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O $PREFIX/bin/apktool')
         os.system('chmod +x $PREFIX/bin/apktool')
         print(Fore.GREEN + "APKTool has been installed successfully in Termux!")
         break
