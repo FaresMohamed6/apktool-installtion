@@ -62,6 +62,7 @@ while True:
     if use_ter.lower() == 'y':
         print(Fore.BLUE + "Installing APKTool in Termux, please wait.....")
         os.system('pkg update && pkg upgrade -y')
+        os.system('pkg install openjdk-17')
         os.system('pkg install -y wget')
         os.system(
             'wget https://github.com/iBotPeaches/Apktool/releases/download/v2.8.1/apktool_2.8.1.jar -O $PREFIX/bin/apktool.jar')
