@@ -70,6 +70,11 @@ while True:
             'wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O $PREFIX/bin/apktool')
         os.system('chmod +x $PREFIX/bin/apktool')
         print(Fore.GREEN + "APKTool has been installed successfully in Termux!")
+        print(Fore.YELLOW + "Exiting...")
+        time.sleep(2)
+        exit()
+        os.system('apktool --version')
+        
         break
     elif usr_ter.lower() == 'n':
         break
@@ -124,6 +129,7 @@ while True:
         os.chmod(path, 0o755)
         os.system('apt-get install zipalign')
         print(Fore.GREEN + "APKTool and Zipalign has been installed successfully in Linux!")
+        os.system('apktool --version')
         break
 
 
