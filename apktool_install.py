@@ -70,10 +70,10 @@ while True:
             'wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O $PREFIX/bin/apktool')
         os.system('chmod +x $PREFIX/bin/apktool')
         print(Fore.GREEN + "APKTool has been installed successfully in Termux!")
+        os.system('apktool --version')
         print(Fore.YELLOW + "Exiting...")
         time.sleep(2)
         exit()
-        os.system('apktool --version')
         
         break
     elif usr_ter.lower() == 'n':
