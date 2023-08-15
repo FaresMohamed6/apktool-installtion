@@ -76,7 +76,7 @@ while True:
         exit()
         
         break
-    elif usr_ter.lower() == 'n':
+    elif use_ter.lower() == 'n':
         break
     else:
         print(Fore.RED + "Invalid input! Please enter 'y' or 'n'.")
