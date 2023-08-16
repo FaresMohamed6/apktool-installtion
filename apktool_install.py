@@ -12,20 +12,6 @@ from pystyle import *
 init()
 ####################################################
 
-while True:
-    v7x = input("Do you love various 7x (y/n): ")
-    if v7x.lower() == 'y':
-        print(Fore.LIGHTMAGENTA_EX + "Loading......")
-        time.sleep(4)
-        break
-
-    elif v7x.lower() == 'n':
-        print(Fore.YELLOW + "Exiting...")
-        time.sleep(2)
-        exit()
-    else:
-        print(Fore.RED + "Invalid input! Please enter 'y' or 'n'.")
-
 if platform.system() == "Windows":
     os.system("cls")
     print("Please run tool in administrator mood because do not there a proplem")
