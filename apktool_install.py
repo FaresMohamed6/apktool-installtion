@@ -14,7 +14,7 @@ init()
 
 if platform.system() == "Windows":
     os.system("cls")
-    print("Please run tool in administrator mood because do not there a proplem")
+    print("Please run tool in administrator mode because do not there a proplem")
 else:
     os.system("clear")
 
